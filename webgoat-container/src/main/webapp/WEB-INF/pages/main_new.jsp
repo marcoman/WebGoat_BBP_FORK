@@ -48,6 +48,19 @@
     <body>
         <section id="container">
             <header id="header">
+              <div>
+                <%
+                    try {
+                      Class<?> cls = Class.forName("com.contrastsecurity.agent.ContrastAgent");
+                      java.lang.reflect.Method getBuildVersion = cls.getDeclaredMethod("getBuildVersion", new Class[0]);
+                      getBuildVersion.setAccessible(true);
+                      String buildVersion = (String)getBuildVersion.invoke(null, new Object[0]);
+                      %><%="Contrast agent version: " + buildVersion%><%
+                    } catch (Exception e) {
+                        %>No Contrast Agent Available<%
+                    }
+                    %>
+              </div>
                 <!--logo start-->
                 <div class="brand">
                     <a href="${pageContext.request.contextPath}/welcome.mvc" class="logo"><span>Web</span>Goat</a>

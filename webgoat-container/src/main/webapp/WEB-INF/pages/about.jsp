@@ -20,7 +20,19 @@
         <p>
             Version: ${version},&nbsp;Build: ${build}
         </p>
-
+        <p>
+        <%
+            try {
+              Class<?> cls = Class.forName("com.contrastsecurity.agent.ContrastAgent");
+              java.lang.reflect.Method getBuildVersion = cls.getDeclaredMethod("getBuildVersion", new Class[0]);
+              getBuildVersion.setAccessible(true);
+              String buildVersion = (String)getBuildVersion.invoke(null, new Object[0]);
+              %><%="Contrast agent version: " + buildVersion%><%
+            } catch (Exception e) {
+                %>No Contrast Agent Available<%
+            }
+        %>
+        </p>
         <div class="row">
             <div class="col-md-6">
                 <p>Contact us:

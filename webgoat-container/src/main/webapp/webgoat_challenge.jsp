@@ -8,7 +8,21 @@
         <h3 class="modal-title" id="myModalLabel">About WebGoat - Provided by the OWASP Foundation</h3>
     </div>
     <div class="modal-body modal-scroll">
-        <p>Thanks for hacking The Goat!</p> 
+        <p>Thanks for hacking The Goat!</p>
+        <p>
+          Contrast: 
+          <%
+              try {
+                Class<?> cls = Class.forName("com.contrastsecurity.agent.ContrastAgent");
+                java.lang.reflect.Method getBuildVersion = cls.getDeclaredMethod("getBuildVersion", new Class[0]);
+                getBuildVersion.setAccessible(true);
+                String buildVersion = (String)getBuildVersion.invoke(null, new Object[0]);
+                %><%="Contrast agent version: " + buildVersion%><%
+              } catch (Exception e) {
+                  %>No Contrast Agent Available<%
+              }
+              %>
+        </p>
         <p>WebGoat is a demonstration of common web application flaws. The
             associated exercises are intended to provide hands-on experience with
             techniques aimed at demonstrating and testing application penetration.
