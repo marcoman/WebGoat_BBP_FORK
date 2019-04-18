@@ -95,31 +95,40 @@
             <artifactId>webgoat-container</artifactId>
             <version>${project.version}</version>
         </dependency>
+        <!--
         <dependency>
             <groupId>org.owasp.webgoat.lesson</groupId>
             <artifactId>challenge</artifactId>
             <version>${project.version}</version>
         </dependency>
+          -->
+          <!--
         <dependency>
             <groupId>org.owasp.webgoat.lesson</groupId>
             <artifactId>bypass-restrictions</artifactId>
             <version>${project.version}</version>
         </dependency>
+            -->
+        <!--
         <dependency>
             <groupId>org.owasp.webgoat.lesson</groupId>
             <artifactId>client-side-filtering</artifactId>
             <version>${project.version}</version>
         </dependency>
+        -->
         <dependency>
             <groupId>org.owasp.webgoat.lesson</groupId>
             <artifactId>cross-site-scripting</artifactId>
             <version>${project.version}</version>
         </dependency>
+        <!--
         <dependency>
             <groupId>org.owasp.webgoat.lesson</groupId>
             <artifactId>html-tampering</artifactId>
             <version>${project.version}</version>
         </dependency>
+          -->
+        <!--
         <dependency>
             <groupId>org.owasp.webgoat.lesson</groupId>
             <artifactId>http-basics</artifactId>
@@ -155,36 +164,44 @@
             <artifactId>insecure-login</artifactId>
             <version>${project.version}</version>
         </dependency>
+          -->
         <dependency>
             <groupId>org.owasp.webgoat.lesson</groupId>
             <artifactId>insecure-deserialization</artifactId>
             <version>${project.version}</version>
         </dependency>
+        <!--
         <dependency>
             <groupId>org.owasp.webgoat.lesson</groupId>
             <artifactId>jwt</artifactId>
             <version>${project.version}</version>
         </dependency>
+        -->
         <dependency>
             <groupId>org.owasp.webgoat.lesson</groupId>
             <artifactId>sql-injection</artifactId>
             <version>${project.version}</version>
         </dependency>
+        <!--
         <dependency>
             <groupId>org.owasp.webgoat.lesson</groupId>
             <artifactId>vulnerable-components</artifactId>
             <version>${project.version}</version>
         </dependency>
+        -->
         <dependency>
             <groupId>org.owasp.webgoat.lesson</groupId>
             <artifactId>xxe</artifactId>
             <version>${project.version}</version>
         </dependency>
+        <!--
         <dependency>
             <groupId>org.owasp.webgoat.lesson</groupId>
             <artifactId>auth-bypass</artifactId>
             <version>${project.version}</version>
         </dependency>
+          -->
+          <!--
         <dependency>
             <groupId>org.owasp.webgoat.lesson</groupId>
             <artifactId>webgoat-introduction</artifactId>
@@ -195,6 +212,8 @@
             <artifactId>webwolf-introduction</artifactId>
             <version>${project.version}</version>
         </dependency>
+            -->
+        <!--
         <dependency>
             <groupId>org.owasp.webgoat.lesson</groupId>
             <artifactId>missing-function-ac</artifactId>
@@ -205,17 +224,19 @@
             <artifactId>password-reset</artifactId>
             <version>${project.version}</version>
         </dependency>
+          -->
         <dependency>
             <groupId>org.owasp.webgoat.lesson</groupId>
             <artifactId>ssrf</artifactId>
             <version>${project.version}</version>
         </dependency>
+        <!--
         <dependency>
             <groupId>org.owasp.webgoat.lesson</groupId>
             <artifactId>secure-passwords</artifactId>
             <version>${project.version}</version>
         </dependency>
-
+          -->
         <!--uncommment below to run/include lesson template in WebGoat Build-->
         <!--<dependency>-->
         <!--<groupId>org.owasp.webgoat.lesson</groupId>-->

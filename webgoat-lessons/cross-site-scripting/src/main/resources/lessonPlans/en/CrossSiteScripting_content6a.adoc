@@ -1,5 +1,7 @@
 == Identify potential for DOM-Based XSS
 
+=== (Currently out of scope for Bug Bounty Program)
+
 DOM-Based XSS can usually be found by looking for the route configurations in the client-side code.
 Look for a route that takes inputs that are being "reflected" to the page.
 

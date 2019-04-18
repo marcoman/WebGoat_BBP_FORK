@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" th:href="@{/plugins/bootstrap/css/bootstrap.min.css}"/>
     <link rel="stylesheet" type="text/css" th:href="@{/css/font-awesome.min.css}"/>
     <link rel="stylesheet" type="text/css" th:href="@{/css/animate.css}"/>
+    <script src="js/contrast.js"/>
 </head>
 <body>
 <section id="container">
@@ -13,6 +14,7 @@
         <div class="brand">
             <a th:href="@{/start.mvc}" class="logo"><span>Web</span>Goat</a>
         </div>
+        <div id="contrast_info" style="margin-left: 268px;margin-right:50px;" class="alert alert-info"></div>
         <div class="toggle-navigation toggle-left">
         </div>
         <div class="lessonTitle">
@@ -22,6 +24,10 @@
     <section class="main-content-wrapper">
 
         <section id="main-content">
+            <div th:with="test=${#httpServletRequest.getAttribute('test')}">
+            
+            </div>
+            
             <div th:if="${param.error}">
                 <p th:text="#{invalid_username_password}">Invalid username and password.</p>
             </div>
