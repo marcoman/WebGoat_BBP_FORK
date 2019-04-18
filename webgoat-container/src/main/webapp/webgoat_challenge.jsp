@@ -11,6 +11,7 @@
         <p>Thanks for hacking The Goat!</p>
         <p>
           Contrast: 
+          <br>Please check the "In Scope Areas" from the <a href="https://bugcrowd.com/contrast-security" target="_blank">Bugcrowd Project Page</a> before subbmiting an any issues.
           <%
               try {
                 Class<?> cls = Class.forName("com.contrastsecurity.agent.ContrastAgent");

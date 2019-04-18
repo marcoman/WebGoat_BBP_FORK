@@ -48,24 +48,25 @@
     <body>
         <section id="container">
             <header id="header">
-              <div>
-                <%
-                    try {
-                      Class<?> cls = Class.forName("com.contrastsecurity.agent.ContrastAgent");
-                      java.lang.reflect.Method getBuildVersion = cls.getDeclaredMethod("getBuildVersion", new Class[0]);
-                      getBuildVersion.setAccessible(true);
-                      String buildVersion = (String)getBuildVersion.invoke(null, new Object[0]);
-                      %><%="Contrast agent version: " + buildVersion%><%
-                    } catch (Exception e) {
-                        %>No Contrast Agent Available<%
-                    }
-                    %>
-              </div>
                 <!--logo start-->
                 <div class="brand">
                     <a href="${pageContext.request.contextPath}/welcome.mvc" class="logo"><span>Web</span>Goat</a>
                 </div>
                 <!--logo end-->
+                <div id="contrast_info" style="margin-left: 268px;margin-right:50px;" class="alert alert-info">
+                  <%
+                      try {
+                        Class<?> cls = Class.forName("com.contrastsecurity.agent.ContrastAgent");
+                        java.lang.reflect.Method getBuildVersion = cls.getDeclaredMethod("getBuildVersion", new Class[0]);
+                        getBuildVersion.setAccessible(true);
+                        String buildVersion = (String)getBuildVersion.invoke(null, new Object[0]);
+                        %><%="Contrast agent version: " + buildVersion%><%
+                      } catch (Exception e) {
+                          %>No Contrast Agent Available<%
+                      }
+                  %>
+                  <br>Please check the "In Scope Areas" from the <a href="https://bugcrowd.com/contrast-security" target="_blank">Bugcrowd Project Page</a> before subbmiting an any issues.
+                </div>
                 <div class="toggle-navigation toggle-left">
                     <button type="button" class="btn btn-default" id="toggle-menu" data-toggle="tooltip" data-placement="right" title="Toggle Navigation">
                         <i class="fa fa-bars"></i>
