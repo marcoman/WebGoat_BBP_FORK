@@ -33,7 +33,7 @@
             <div id="contrast_info" style="margin-left: 268px;margin-right:50px;" class="alert alert-info">
               <%
                   try {
-                    Class<?> cls = Class.forName("com.contrastsecurity.agent.ContrastAgent");
+                    Class<?> cls = Class.forName("com.contrastsecurity.agent.core.ContrastAgent");
                     java.lang.reflect.Method getBuildVersion = cls.getDeclaredMethod("getBuildVersion", new Class[0]);
                     getBuildVersion.setAccessible(true);
                     String buildVersion = (String)getBuildVersion.invoke(null, new Object[0]);
@@ -42,7 +42,7 @@
                       %>No Contrast Agent Available<%
                   }
               %>
-              <br>Please check the "In Scope Areas" from the <a href="https://bugcrowd.com/contrast-security" target="_blank">Bugcrowd Project Page</a> before subbmiting an any issues.
+              <br>Please check the "In Scope Areas" from the <a href="https://bugcrowd.com/contrast-security" target="_blank">Bugcrowd Project Page</a> before submitting an any issues.
             </div>
             <div class="toggle-navigation toggle-left">
 

@@ -23,7 +23,7 @@
         <p>
         <%
             try {
-              Class<?> cls = Class.forName("com.contrastsecurity.agent.ContrastAgent");
+              Class<?> cls = Class.forName("com.contrastsecurity.agent.core.ContrastAgent");
               java.lang.reflect.Method getBuildVersion = cls.getDeclaredMethod("getBuildVersion", new Class[0]);
               getBuildVersion.setAccessible(true);
               String buildVersion = (String)getBuildVersion.invoke(null, new Object[0]);
